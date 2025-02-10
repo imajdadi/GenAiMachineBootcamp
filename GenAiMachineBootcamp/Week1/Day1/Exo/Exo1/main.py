@@ -65,15 +65,11 @@ while "Pastrami sandwich" in sandwich_orders:
 print  (sandwich_orders)
 #Créez une liste vide appelée finished_sandwiches.
 finished_sandwiched = [] 
-for numleng in range(len(sandwich_orders)) :
-   sandwich=sandwich_orders[numleng]
-   print(f"I made your {sandwich}")
-   finished_sandwiched.append(sandwich)
-   sandwich_orders.remove(sandwich)
 
-print(finished_sandwiched)
+#print(finished_sandwiched)
+while sandwich_orders:
+    sandwich = sandwich_orders.pop(0) 
+    print(f"I made your {sandwich}.")
+    finished_sandwiched.append(sandwich)
 
-
-#Retirez un à un chaque sandwich de la poêle sandwich_orders tout
-#en les ajoutant à la finished_sandwichesliste
 
