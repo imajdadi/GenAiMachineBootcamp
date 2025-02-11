@@ -20,14 +20,64 @@ print(f"le cout total pour toute la famille est {total_cout}$ ")
 #les noms et les âges et ajoutez-les dans un dictionnaire familial initialement vide).
 # Exercise 4 : Some Geography
 #Write a function called describe_city() that accepts the name of a city and its country as parameters.
-def describe_city(city ,country="France") : #Give the country parameter a default value.
+
+def describe_city(city ,country="France") :
   print(f"the city of {city} is in {country}")
 
-#The function should print a simple sentence, such as “city is in country”.
 describe_city("Paris")
 describe_city("Reykjavik" , "Iceland")
 describe_city("Rabat" , "Morocco")
+#Exercice 8 : Quiz Star Wars
+#projet permet aux utilisateurs de répondre à un quiz pour tester
+# leurs connaissances sur Star Wars
 
+data = [
+    {
+        "question": "What is Baby Yoda's real name?",
+        "answer": "Grogu"
+    },
+    {
+        "question": "Where did Obi-Wan take Luke after his birth?",
+        "answer": "Tatooine"
+    },
+    {
+        "question": "What year did the first Star Wars movie come out?",
+        "answer": "1977"
+    },
+    {
+        "question": "Who built C-3PO?",
+        "answer": "Anakin Skywalker"
+    },
+    {
+        "question": "Anakin Skywalker grew up to be who?",
+        "answer": "Darth Vader"
+    },
+    {
+        "question": "What species is Chewbacca?",
+        "answer": "Wookiee"
+    }
+]
+
+
+#Créez une fonction qui pose des questions à l'utilisateur et vérifie ses réponses.
+def quiz() :
+    correct_answer = 0
+    incorrect_answer = 0
+    user_response = ""
+    for answer in data :
+        user_response = input(print(f"{answer["question"]}"))
+        if user_response == answer["answer"]:
+            correct_answer = correct_answer+1
+        else :
+            incorrect_answer = incorrect_answer +1
+
+    print(f"le nombre de reponses correct est : {correct_answer} / le nombre de reponses incorrect est : {incorrect_answer} ")
+
+quiz()
+#  Suivez le nombre de réponses correctes et incorrectes. Créez une liste de réponses incorrectes
+#Créer une fonction qui informe l'utilisateur de son nombre de réponses correctes/incorrectes.
+#Bonus :affiche à l'utilisateur les questions auxquelles il a mal répondu, sa réponse et la bonne réponse.
+# S'il a eu plus de 3 mauvaises réponses, demandez-lui de rejouer.
 
 
 
