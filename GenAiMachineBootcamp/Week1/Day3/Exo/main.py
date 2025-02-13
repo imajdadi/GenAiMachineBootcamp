@@ -46,5 +46,25 @@ if davids_dog.height >= sarahs_dog.height :
     print(f"le nom de le chien le plus grand est {davids_dog.name}")
 else : 
     print(f"le chien et le plus grand est {sarahs_dog.name} ")
-    
+
+#Exercice 3 : Qui est le producteur de la chanson ?
+class Song : #Définissez une classe appelée Song,
+    def __init__(self,lyrics):
+        self.lyrics = lyrics
+
+    def sing_me_a_song(self):
+        for line in self.lyrics :
+            print (line) 
+#__init__()méthode doit avoir deux arguments : selfet lyrics(une liste).
+# À l'intérieur de votre classe, créez une méthode appelée sing_me_a_song qui 
+# imprime chaque élément de lyricssur sa propre ligne.
+#Créez un objet, par exemple :
+
+
+
+
+stairway = Song(["There’s a lady who's sure","all that glitters is gold", 
+                 "and she’s buying a stairway to heaven"])
+#Ensuite, appelez la sing_me_a_songméthode. Le résultat doit être :
+stairway.sing_me_a_song()
 
