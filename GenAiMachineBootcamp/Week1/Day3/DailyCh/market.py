@@ -9,7 +9,7 @@ class Farm :
         else:
             self.animals[animal] = animal_number
 
-    def total_animals(self):
+    def info_animals(self):
         total = f"{self.name}'s farm\n\n"
         for animal, count in self.animals.items():
             total += f"{animal} : {count}\n"
@@ -28,6 +28,6 @@ macdonald.add_animal('cow',5)
 macdonald.add_animal('sheep')
 macdonald.add_animal('sheep')
 macdonald.add_animal('goat', 12)
-print(macdonald.total_animals())
+print(macdonald.info_animals())
 print(macdonald.get_animal_types())
 print(macdonald.get_short_info())
