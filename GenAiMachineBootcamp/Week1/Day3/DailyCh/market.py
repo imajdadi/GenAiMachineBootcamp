@@ -3,11 +3,11 @@ class Farm :
     def __init__(self, animal_name):#La Farmclasse a-t-elle besoin d'une __init__méthode ? Si oui, 
         self.name = animal_name # quels paramètres doit-elle accepter ? 
         self.animals = {}
-    def add_animal(self, animal, count=1):#Combien de méthodes la Farmclasse a-t-elle besoin
+    def add_animal(self, animal, animal_number =1):#Combien de méthodes la Farmclasse a-t-elle besoin
         if animal in self.animals:
-            self.animals[animal] += count
+            self.animals[animal] += animal_number
         else:
-            self.animals[animal] = count
+            self.animals[animal] = animal_number
 
     def total_animals(self):
         total = f"{self.name}'s farm\n\n"
