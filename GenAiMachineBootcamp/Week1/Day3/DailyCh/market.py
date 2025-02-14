@@ -21,6 +21,7 @@ class Farm :
     def get_short_info(self):#méthode doit appeler la get_animal_typesfonction 
         animal_list = ', '.join(self.get_animal_types())
         return (f"La ferme {self.name} possède {animal_list}")
+    #pour le s ntlk module
 
 
 macdonald = Farm("McDonald")
