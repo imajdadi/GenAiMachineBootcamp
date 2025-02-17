@@ -33,8 +33,8 @@ incredible_family = TheIncredibles("Incredibles", members)
 incredible_family.incredible_presentation()
 
 # Ajouter un enfant à la famille (Baby Jack)
-baby_jack = {'name': 'Jack', 'age': 2, 'gender': 'Male', 'is_child': True, 'power': 'Unknown Power', 'incredible_name': 'BabyJack'}
-incredible_family.born(**baby_jack)
+baby_adam = {'name': 'Adam', 'age': 2, 'gender': 'Male', 'is_child': True, 'power': 'Unknown Power', 'incredible_name': 'BabyAdam'}
+incredible_family.born(**baby_adam)
 
 # Appeler à nouveau la méthode incredible_presentation pour afficher la famille mise à jour
 incredible_family.incredible_presentation()
@@ -44,6 +44,6 @@ incredible_family.use_power('Michael')  # Devrait imprimer le pouvoir de Michael
 
 # Essayer d'utiliser les pouvoirs d'un membre mineur (Jack)
 try:
-    incredible_family.use_power('Jack')  # Devrait lever une exception car Jack n'a pas 18 ans
+    incredible_family.use_power('Adam')  # Devrait lever une exception car Jack n'a pas 18 ans
 except Exception as e:
     print(e)
