@@ -1,37 +1,23 @@
-class Family : 
-    def __init__(self, members, last_name):
+class Family:
+    def __init__(self, last_name, members):
+        # Initialisation de la famille avec un nom et des membres
         self.members = members
         self.last_name = last_name
 
-    def born(self, **kwargs):#a child to the members list (use **kwargs)
+    def born(self, **kwargs):
+        # Ajoute un enfant à la famille et affiche un message de félicitations
         self.members.append(kwargs)
         print(f"Félicitations à la famille {self.last_name} pour la naissance de {kwargs['name']} !")
 
-    def is_18(self,name):
+    def is_18(self, name):
+        # Vérifie si un membre est majeur (plus de 18 ans)
         for membre in self.members:
-            if membre['name'] == name:#returns True if they are over 18 and False if not.
+            if membre['name'] == name:
                 return membre['age'] >= 18
-        return False 
-    def family_presentation(self):#a method that prints the family’s 
+        return False
+
+    def family_presentation(self):
+        # Affiche les détails de chaque membre de la famille
+        print(f"Voici la famille {self.last_name} :")
         for membre in self.members:
-
             print(f"Nom: {membre['name']}, Âge: {membre['age']}, Genre: {membre['gender']}, Enfant: {'Oui' if membre['is_child'] else 'Non'}")
-#Create an instance of the Family class,
-membres_initiaux = [
-    {'name': 'Michael', 'age': 35, 'gender': 'Male', 'is_child': False},
-    {'name': 'Sarah', 'age': 32, 'gender': 'Female', 'is_child': False}
-]
-
-my_family = Family(membres_initiaux, "Adamnou")
-
-my_family.family_presentation()
-
-# Ajout d'un enfant
-my_family.born(name='Emmane', age=0, gender='Female', is_child=True)
-
-# Vérification de l'âge
-print(my_family.is_18('Michael'))  # True
-print(my_family.is_18('Emmane'))  # False
-
-# Affichage mis à jour de la famille
-my_family.family_presentation()
