@@ -62,4 +62,44 @@ stairway = Song(["There’s a lady who's sure","all that glitters is gold",
                  "and she’s buying a stairway to heaven"])
 #Ensuite, appelez la sing_me_a_songméthode. Le résultat doit être :
 stairway.sing_me_a_song()
+#Exercise 4 : Afternoon at the Zoo
+class Zoo:
+    def __init__(self, zoo_name):
+        self.name = zoo_name
+        self.animals = []
+    
+    def add_animal(self, new_animal):
+        if new_animal not in self.animals:
+            self.animals.append(new_animal)
+    
+    def get_animals(self):
+        print("Animals in the zoo:", self.animals)
+    
+    def sell_animal(self, animal_sold):
+        if animal_sold in self.animals:
+            self.animals.remove(animal_sold)
+    
+    def sort_animals(self):
+        sorted_animals = sorted(self.animals)
+        grouped_animals = {}
+        
+        for animal in sorted_animals:
+            first_letter = animal[0].upper()
+            if first_letter not in grouped_animals:
+                grouped_animals[first_letter] = []
+            grouped_animals[first_letter].append(animal)
+        
+        return grouped_animals
+
+# Example usage:
+zoo = Zoo("My Amazing Zoo")
+zoo.add_animal("Bear")
+zoo.add_animal("Cat")
+zoo.add_animal("Dolphin")
+zoo.add_animal("Deer")
+zoo.add_animal("Falcon")
+zoo.add_animal("Flamingo")
+
+zoo.get_animals()
+print(zoo.sort_animals())
 
