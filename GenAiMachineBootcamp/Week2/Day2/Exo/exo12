@@ -1,0 +1,39 @@
+EXO1 : Identifier les types de données
+
+Rapports financiers dans un fichier Excel :
+Type : Structurées
+Explication : Organisées en lignes et colonnes, faciles à analyser.
+
+Photographies sur une plateforme de médias sociaux :
+Type : Non structurées
+Explication : Fichiers multimédias sans structure définie.
+
+Articles de presse sur un site Web :
+Type : Non structurées
+Explication : Texte libre nécessitant une analyse pour être structuré.
+
+Données d'inventaire dans une base de données relationnelle :
+Type : Structurées
+Explication : Organisées sous forme de tables, facilement analysables.
+
+Entretiens enregistrés d’une étude de marché :
+Type : Non structurées
+Explication : Audio ou texte libre, nécessitant une analyse de contenu.
+
+Exercice 2 : Exercice de transformation
+
+Articles de blog sur les expériences de voyage :
+Méthode : Analyse de texte (NLP)
+Extraire des informations comme "Lieu", "Activité", "Avis" et les organiser en tableaux.
+
+Enregistrements audio des appels du service client :
+Méthode : Transcription et analyse de sentiments
+Convertir l'audio en texte et structurer par "Problème", "Produit", "Satisfaction".
+
+Notes manuscrites d'une séance de brainstorming :
+Méthode : OCR et catégorisation
+Convertir en texte via OCR et organiser en catégories comme "Idées", "Solutions".
+
+Tutoriel vidéo sur la cuisine :
+Méthode : Transcription et structuration
+Transcrire le contenu et organiser par "Recette", "Ingrédients", "Étapes".
